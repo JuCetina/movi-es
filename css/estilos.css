@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?z3xlt4');
+    src:  url('../fonts/icomoon.eot?z3xlt4#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?z3xlt4') format('truetype'),
+      url('../fonts/icomoon.woff?z3xlt4') format('woff'),
+      url('../fonts/icomoon.svg?z3xlt4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    font-size: 20px;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-down:before {
+    content: "\e900";
+  }
+  .icon-home:before {
+    content: "\e901";
+  }
+  .icon-cog:before {
+    content: "\e994";
+  }
+  .icon-fire:before {
+    content: "\e9a9";
+  }
+  .icon-heart:before {
+    content: "\e9da";
+  }  
+
+body{
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+  display: grid;
+  grid-template: 60px 1fr / 80px 1fr;
+  grid-template-areas:    "header header"
+                          "bar .";
+  height: 100vh;
+}
+
+.header{
+  grid-area: header;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 7px 5px 0px rgba(194,188,194,0.63);
+  -moz-box-shadow: 0px 7px 5px 0px rgba(194,188,194,0.63);
+  box-shadow: 0px 7px 5px 0px rgba(194,188,194,0.63);
+}
+
+.header img{
+  width: 50px;
+  vertical-align: middle;
+}
+
+.header p{
+  margin: 0;
+  font-weight: bold;
+}
+
+.header .logo{
+  margin-left: 20px;
+  color: red;
+  font-size: 18px;
+}
+
+.header .user{
+  color: #251375;
+  font-size: 13px;
+  margin: 5px 20px 0 0;
+}
+
+.header .user img{
+  border-radius: 50%;
+}
+
+.header input{
+  font-family: 'Open Sans', sans-serif;
+  margin: 12px 15px;
+  border-radius: 6px;
+  border: solid 1px #b6b0b0;
+  width: 45%;
+  padding: 0 0 0 5px;
+}
+
+.bar{
+  grid-area: bar;
+  background: rgb(255, 87, 94);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bar .items-container{
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+}
+
+.items-container a{
+  display: inherit;
+  flex-direction: inherit;
+  align-items: inherit;
+  text-decoration: none;
+  color: white;
+  margin: 15px 0;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.item:nth-of-type(1){
+  margin-top: 28px;
+}
+
+
+/* Secciones de las películas */
+
+.movies-container{
+  display: grid;
+  grid-template: 1fr / minmax(150px, 1fr);
+}
+
+.movie-content-title{
+  font-size: 17px;
+  color: #251375;
+  margin: 15px 0 10px 15px;
+}
+
+.movie-list{
+  display: flex;
+  height: 250px;
+}
+
+.movie-item{
+  margin: 0 20px;
+  overflow: hidden; /* Recorta lo que sobra de la imagen */
+  position: relative;
+}
+
+.movie-imageContainer,
+.movie-subtitle,
+.movie-description{
+  margin: 0;
+}
+
+
+/*  Texto de las películas */
+.movie-textContainer{
+  background: rgba(255, 87, 94, .7);
+  color: white;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+}
+
+.movie-subtitle{
+  font-size: 19px;
+}
+
+.movie-description{
+  font-size: 12px;
+}
+
+
+
